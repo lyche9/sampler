@@ -20,24 +20,24 @@ router.post('/', function(req, res) {
   var params = {
     key:        API_KEY.key,
     part:       "snippet",
-    q:          req.body.test,
+    q:          req.body.q,
     type:       "video",
     maxResults: 5
   };
+
 
   youtube.search.list(params, function(err, response) {
     if (err) {
       console.log(err);
     }
     else {
+      var videos = [];
       for (var i in response.items) {
-        console.log(response.items[i]);
+        videos.push(response.items[i].id.videoId);
       }
+      res.send(videos);
     }
   });
-
-
-
 });
 
 
