@@ -1,5 +1,12 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
+html
+  head
+    title #{title}
+  body
+    h1= title
+    p Welcome to #{title}
+    form(action='/', method='post')
+      select(name="test")
+        option(value=Louis Armstrong) Louis Armstrong
+        option(value=George Gershwin) George Gershwin
+        option(value=Fritz Kreisler) Fritz Kreisler
+      input(type="submit")
