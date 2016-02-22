@@ -5,6 +5,8 @@ html
     script(src='javascripts/query.js')
     title #{title}
   body
+
+    .head
     h1= title
     p Welcome to #{title}
     select(name="q", id="sampleQuery", onchange="query();")
@@ -13,4 +15,3 @@ html
       option(value=Fritz Kreisler) Fritz Kreisler
 
     .result
-      p testtest

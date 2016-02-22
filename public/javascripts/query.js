@@ -9,9 +9,12 @@ function query() {
     data: {q : $("#sampleQuery").val()},
 		success: function(data) {
 			$(".result").empty();
-			console.log(data);
-			$.each(data, function (index, value) {
-				$(".result").append("<br>" + data[index].title );
+			$.each(data, function (i, value) {
+				$(".result").append("<br><a href = \""
+          + "https://www.youtube.com/watch?v="
+          + data[i].id
+          + "\"><img class=\"thumb\" src=\""
+          + data[i].thumbnail.medium.url +"\"</img>");
 			});
 		}
 	});
