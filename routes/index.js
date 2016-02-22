@@ -8,7 +8,7 @@ var API_KEY = require("../key.json");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Sampler' });
 });
 
 /*POST to index*/
@@ -33,8 +33,17 @@ router.post('/', function(req, res) {
     else {
       var videos = [];
       for (var i in response.items) {
-        videos.push(response.items[i].id.videoId);
+        var video = {
+          "id" :        "",
+          "title":      "",
+          "thumbnail":  {},
+        };
+        video.id = response.items[i].id.videoId;
+        video.title = response.items[i].snippet.title;
+        video.thumbnail = response.items[i].snippet.thumbnails;
+        videos.push(video);
       }
+
       res.send(videos);
     }
   });

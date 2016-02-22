@@ -11,7 +11,7 @@ function query() {
 			$(".result").empty();
 			console.log(data);
 			$.each(data, function (index, value) {
-				$(".result").append("<br>" + data[index] );
+				$(".result").append("<br>" + data[index].title );
 			});
 		}
 	});
