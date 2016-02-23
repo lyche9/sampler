@@ -1,5 +1,5 @@
 body {
-  padding: 50px;
+  padding: 10px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -7,8 +7,21 @@ a {
   color: #00B7FF;
 }
 
-.head {}
+.header {
+  text-align: center;
+  width: 800px ;
+  margin-left: auto ;
+  margin-right: auto ;
+  margin-bottom: 50px;
+}
 
-.result {}
+.result {
+  width: 1000px ;
+  margin-left: auto ;
+  margin-right: auto ;
+}
 
+.thumb {
+  float: left;
+}
 #sampleQuery {}

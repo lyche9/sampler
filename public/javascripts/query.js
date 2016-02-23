@@ -10,7 +10,7 @@ function query() {
 		success: function(data) {
 			$(".result").empty();
 			$.each(data, function (i, value) {
-				$(".result").append("<br><a href = \""
+				$(".result").append("<a href = \""
           + "https://www.youtube.com/watch?v="
           + data[i].id
           + "\"><img class=\"thumb\" src=\""

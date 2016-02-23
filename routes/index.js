@@ -8,13 +8,11 @@ var API_KEY = require("../key.json");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Sampler' });
+  res.render('index', { title: 'sampler' });
 });
 
 /*POST to index*/
 router.post('/', function(req, res) {
-
-  console.log(req.body);
 
   /*Make API call*/
   var params = {

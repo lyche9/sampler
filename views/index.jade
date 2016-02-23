@@ -3,15 +3,17 @@ html
   head
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
     script(src='javascripts/query.js')
+    link(rel='stylesheet', href='/stylesheets/style.css')
     title #{title}
   body
-
-    .head
-    h1= title
-    p Welcome to #{title}
-    select(name="q", id="sampleQuery", onchange="query();")
-      option(value=Louis Armstrong) Louis Armstrong
-      option(value=George Gershwin) George Gershwin
-      option(value=Fritz Kreisler) Fritz Kreisler
+    .header
+      #title
+        h1=title
+      #menu
+        p Currently sampling:
+        select(name="q", id="sampleQuery", onchange="query();")
+          option(value=Louis Armstrong) Louis Armstrong
+          option(value=George Gershwin) George Gershwin
+          option(value=Fritz Kreisler) Fritz Kreisler
 
     .result
