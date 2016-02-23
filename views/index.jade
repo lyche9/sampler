@@ -4,6 +4,7 @@ html
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
     script(src='javascripts/query.js')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/animate.min.css')
     title #{title}
   body
     .header
@@ -12,8 +13,11 @@ html
       #menu
         p Currently sampling:
         select(name="q", id="sampleQuery", onchange="query();")
-          option(value=Louis Armstrong) Louis Armstrong
+          option(value=Elton John) Elton John
+          option(value=Stevie Wonder) Stevie Wonder
+          option(value=Frank Sinatra) Frank Sinatra
           option(value=George Gershwin) George Gershwin
           option(value=Fritz Kreisler) Fritz Kreisler
+          option(value=Louis Armstrong) Louis Armstrong
 
     .result

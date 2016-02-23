@@ -13,7 +13,7 @@ function query() {
 				$(".result").append("<a href = \""
           + "https://www.youtube.com/watch?v="
           + data[i].id
-          + "\"><img class=\"thumb\" src=\""
+          + "\"><img class=\"thumb animated fadeIn\" src=\""
           + data[i].thumbnail.medium.url +"\"</img>");
 			});
 		}

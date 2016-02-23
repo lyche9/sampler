@@ -20,7 +20,7 @@ router.post('/', function(req, res) {
     part:       "snippet",
     q:          req.body.q,
     type:       "video",
-    maxResults: 5
+    maxResults: 9
   };
 
 
